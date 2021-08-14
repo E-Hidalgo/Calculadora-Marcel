@@ -1,26 +1,81 @@
 * {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
+  display:flex;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ------------ COLORS -------- */
 
-.root {
-    --dark-blue: #232B3E;
-    --light-blue: #313852;
-    --green-dark: #4DA586;
-    --green-background: #A9C9BA;
-    --dark-numbers: #444851;
-    --white: #FFFFFF;
-    --yellow: #F2C563;
-    --green: #63C05B;
-    --red: #E46958;
+:root {
+  --dark-blue: #232b3e;
+  --light-blue: #313852;
+  --green-dark: #4da586;
+  --green-background: #a9c9ba;
+  --dark-numbers: #444851;
+  --white: #ffffff;
+  --yellow: #f2c563;
+  --green: #63c05b;
+  --red: #e46958;
 }
 
+.main-container {
+  border: 2px solid black;
+  width: 20rem;
+  height: 35rem;
+  background-color: var(--dark-blue);
+  border-radius: 5px;
+  padding: 1rem;
+  color: white;
+  
+}
 
+.controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-radius: 5px;
+
+}
+
+.btn {
+}
+
+.mini-screen {
+  height: 4rem;
+  color: var(--green-dark);
+  text-align: right;
+}
+
+.screen {
+  height: 4rem;
+  color: var(--green-dark);
+  text-align: right;
+}
+
+.keyboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: var(--light-blue);
+  border-radius: 5px;
+}
+
+.key {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin: auto;
+  background-color: var(--light-blue);
+  border: none;
+  color: white;
+}
