@@ -5,7 +5,7 @@
 }
 
 body {
-  display:flex;
+  display: flex;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 20px;
   height: 100vh;
@@ -19,6 +19,7 @@ body {
 :root {
   --dark-blue: #232b3e;
   --light-blue: #313852;
+  --light-grey: #8B959E;
   --green-dark: #4da586;
   --green-background: #a9c9ba;
   --dark-numbers: #444851;
@@ -30,13 +31,12 @@ body {
 
 .main-container {
   border: 2px solid black;
-  width: 20rem;
+  width: 25rem;
   height: 35rem;
   background-color: var(--dark-blue);
   border-radius: 5px;
   padding: 1rem;
   color: white;
-  
 }
 
 .controls {
@@ -44,10 +44,12 @@ body {
   justify-content: space-between;
   padding: 0 1rem;
   border-radius: 5px;
-
 }
 
 .btn {
+  display: flex;
+  justify-content: space-around;
+  width: 5rem;
 }
 
 .mini-screen {
@@ -78,4 +80,34 @@ body {
   background-color: var(--light-blue);
   border: none;
   color: white;
+}
+
+.btn-red {
+  background-color: var(--red);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+.btn-yellow {
+  background-color: var(--yellow);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+.btn-green {
+  background-color: var(--green);
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+}
+
+.operator {
+      color: var(--green-dark);
+      background-color: var(--dark-blue);
+}
+
+.number {
+    color: var(--light-grey);
 }
