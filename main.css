@@ -22,6 +22,7 @@ body {
   --light-grey: #8b959e;
   --green-dark: #4da586;
   --green-background: #a9c9ba;
+  --seashell: #F4FDFB;
   --dark-numbers: #444851;
   --white: #ffffff;
   --yellow: #f2c563;
@@ -155,4 +156,67 @@ body {
   width: 2.5rem;
   height: 1.25rem;
   border-radius: 0.625rem;
+}
+
+
+
+
+
+
+/*  LIGTH MODE */
+
+.main-container--light {
+  background-color: var(--white);
+}
+
+.mini-screen--light {
+  color: var(--dark-blue);
+  background-color: var(--seashell);
+}
+
+.screen--light {
+ color: var(--dark-blue);
+background-color: var(--seashell);
+}
+
+.keyboard-grid--light {
+  background-color: var(--white);
+}
+
+.key--light {
+  background-color: var(--white);
+  color: var(--dark-blue);
+}
+
+
+
+
+
+
+
+.operator--light {
+  background-color: var(--seashell);
+  color: var(--dark-blue);
+}
+
+.number--light {
+  color: var(--light-grey);
+}
+
+.operator:hover {
+  background-color: var(--green-dark);
+  color: white;
+}
+
+.number:hover {
+  background-color: var(--white);
+  color: #232b3e;
+}
+
+.equal {
+  background-color: var(--green-dark);
+}
+
+.equal:hover {
+  background-color: #232b3e;
 }
