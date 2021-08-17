@@ -15,7 +15,6 @@ let clear = document.getElementById("clear");
 let keys = Array.from(key);
 let operators = Array.from(operator);
 let numbers = Array.from(number);
-console.log(operators);
 
 // -------- EVENT LISTENER CHANGING CLASSES --------
 
@@ -41,27 +40,31 @@ toggleBtn.addEventListener("click", () => {
 
 operators.forEach((operator) => {
     operator.addEventListener("click", (e) => {
-        screen.textContent += e.target.value;
+        screen.textContent += e.target.innerHTML; // it also works with e.target.value, it will return an array of the buttons too
         // -------- CLEAR BUTTON --------
-        if (operator.value == "C") {
-            screen.innerHTML = "";
-            miniScreen.innerHTML = "";
+        if (operator.textContent == "C") {
+            screen.textContent = 0;
+            miniScreen.textContent = 0;
+        } else if (screen.textContent.slice(-1) === "+" ||
+            screen.textContent.slice(-1) === "-" ||
+            screen.textContent.slice(-1) === "*" ||
+            screen.textContent.slice(-1) === "/" ||
+            screen.textContent.slice(-1) === "%" ||
+            screen.textContent.slice(-1) === "+-") {} else {
+            screen.textContent += this.value
         }
-
     });
 });
 
+
 // -------- PRINTING NUMBERS --------
 
-/* numbers.forEach(number => {
-            number.addEventListener('click', (e) => {
-                screen.textContent += e.target.value;
-                if (number.value == "+" ||
-                    number.value == "-" ||
-                    number.value == "*" ||
-                    number.value == "/" ||
-                    number.value == "%" ||
-                    number.value == "+-") {
+numbers.forEach(number => {
+    number.addEventListener('click', (e) => {
+        screen.textContent += e.target.value;
+        /*  if (!screen.innerHTML == "") {
+             screen.textContent = "";
+         } */
 
-                }
-            }); */
+    });
+});
