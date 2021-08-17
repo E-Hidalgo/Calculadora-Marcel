@@ -15,7 +15,7 @@ let clear = document.getElementById("clear");
 let keys = Array.from(key);
 let operators = Array.from(operator);
 let numbers = Array.from(number);
-console.log(operators)
+console.log(operators);
 
 // -------- EVENT LISTENER CHANGING CLASSES --------
 
@@ -53,7 +53,7 @@ operators.forEach((operator) => {
 
 // -------- PRINTING NUMBERS --------
 
-numbers.forEach(number => {
+/* numbers.forEach(number => {
             number.addEventListener('click', (e) => {
                 screen.textContent += e.target.value;
                 if (number.value == "+" ||
@@ -61,5 +61,7 @@ numbers.forEach(number => {
                     number.value == "*" ||
                     number.value == "/" ||
                     number.value == "%" ||
-                    number.value == "+-") {}
-            });
+                    number.value == "+-") {
+
+                }
+            }); */
