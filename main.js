@@ -12,6 +12,8 @@ let equal = document.getElementById("equal");
 let label = document.getElementById("label");
 let clear = document.getElementById("clear");
 let decimal = document.getElementById("decimal");
+let operationLog = document.getElementById('opLog');
+let historyBtn = document.getElementById("historyBtn");
 
 let keys = Array.from(key);
 let operators = Array.from(operator);
@@ -87,3 +89,9 @@ decimal.addEventListener("click", () => {
     screen.textContent += decimal.value;
   }
 });
+
+// -------- TO OPENS OPERATIONS LOG -------
+
+historyBtn.addEventListener("click", () => {
+  historyBtn.classList.add("visible");
+}

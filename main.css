@@ -152,6 +152,7 @@ body {
   background-color: var(--white);
   box-shadow: rgba(0, 0, 0, 0.5);
 }
+
 .checkbox {
   display: none;
 }
@@ -233,5 +234,20 @@ body {
 }
 
 .dot--light {
+  color: var(--dark-blue);
+}
+
+.operation-log {
+  visibility: hidden;
+  position: relative;
+  border: 2px solid var(--light-blue);
+  height: 10rem;
+  width: 18rem;
+  border-radius: 5%;
+  left: 50px;
+  text-align: center;
+  padding-top: 1rem;
+  bottom: 10rem;
+  background-color: var(--light-grey);
   color: var(--dark-blue);
 }
