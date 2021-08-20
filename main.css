@@ -48,9 +48,11 @@ body {
 }
 
 .btn {
+  position: relative;
   display: flex;
   justify-content: space-around;
   width: 5rem;
+  left: -1rem;
 }
 
 .mini-screen {
@@ -168,6 +170,7 @@ body {
   border-radius: 0.625rem;
   border: 1px solid var(--light-grey);
   background-color: var(--green-dark);
+  cursor: pointer;
 }
 
 .dot {
@@ -234,4 +237,25 @@ body {
 
 .dot--light {
   color: var(--dark-blue);
+}
+
+.operation-log {
+  position: relative;
+  background-color: var(--light-grey);
+  width: 20rem;
+  color: #f4fdfb;
+  left: 2rem;
+  bottom: 12.5rem;
+  min-height: 9.375rem;
+  max-height: 12.5rem;
+  padding: 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+.operation-log {
+  visibility: hidden;
+}
+.--is-visible {
+  visibility: visible;
 }

@@ -12,10 +12,14 @@ let equal = document.getElementById("equal");
 let label = document.getElementById("label");
 let clear = document.getElementById("clear");
 let decimal = document.getElementById("decimal");
+let plusMinus = document.getElementById("plusMinus");
 
 let keys = Array.from(key);
 let operators = Array.from(operator);
 let numbers = Array.from(number);
+
+let logBtn = document.getElementById("log");
+let log = document.getElementById("operationLog");
 
 // -------- EVENT LISTENER CHANGING CLASSES --------
 
@@ -78,6 +82,8 @@ numbers.forEach((number) => {
 equal.addEventListener("click", () => {
   miniScreen.textContent = screen.textContent;
   screen.textContent = eval(screen.innerHTML);
+  operationLog.innerHTML +=
+    miniScreen.textContent + " = " + screen.textContent + "<br>";
 });
 
 // -------- FOR F***NG DECIMALS --------
@@ -85,5 +91,19 @@ equal.addEventListener("click", () => {
 decimal.addEventListener("click", () => {
   if (!screen.textContent.includes(".")) {
     screen.textContent += decimal.value;
+  }
+});
+
+// -------- FOR OPERATION LOG --------
+logBtn.addEventListener("click", () => {
+  operationLog.classList.toggle("--is-visible");
+});
+
+// -------- FOR +- --------
+plusMinus.addEventListener("click", () => {
+  if (screen.innerHTML > 0) {
+    screen.innerHTML = screen.innerHTML * -1;
+  } else if (screen.innerHTML < 0) {
+    screen.innerHTML = screen.innerHTML * -1;
   }
 });
