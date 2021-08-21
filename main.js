@@ -12,8 +12,9 @@ let equal = document.getElementById("equal");
 let label = document.getElementById("label");
 let clear = document.getElementById("clear");
 let decimal = document.getElementById("decimal");
-let operationLog = document.getElementById('opLog');
+let operationLog = document.getElementById("opLog");
 let historyBtn = document.getElementById("historyBtn");
+let plusMinus = document.getElementById("plusMinus");
 
 let keys = Array.from(key);
 let operators = Array.from(operator);
@@ -80,6 +81,8 @@ numbers.forEach((number) => {
 equal.addEventListener("click", () => {
   miniScreen.textContent = screen.textContent;
   screen.textContent = eval(screen.innerHTML);
+  operationLog.innerHTML +=
+    miniScreen.textContent + " = " + screen.textContent + "<br>";
 });
 
 // -------- FOR F***NG DECIMALS --------
@@ -93,5 +96,11 @@ decimal.addEventListener("click", () => {
 // -------- TO OPENS OPERATIONS LOG -------
 
 historyBtn.addEventListener("click", () => {
-  historyBtn.classList.add("visible");
-}
+  operationLog.classList.toggle("--is-visible");
+});
+
+// -------- PLUS MINUS BUTTON -------
+
+plusMinus.addEventListener("click", () => {
+  screen.textContent = screen.textContent * -1;
+});

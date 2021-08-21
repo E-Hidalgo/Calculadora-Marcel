@@ -240,6 +240,8 @@ body {
 .operation-log {
   visibility: hidden;
   position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
   border: 2px solid var(--light-blue);
   height: 10rem;
   width: 18rem;
@@ -250,4 +252,8 @@ body {
   bottom: 10rem;
   background-color: var(--light-grey);
   color: var(--dark-blue);
+}
+
+.--is-visible {
+  visibility: visible;
 }
